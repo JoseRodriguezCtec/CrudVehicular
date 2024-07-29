@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.aprendizaje.crud"
-    compileSdk = 31
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.aprendizaje.crud"
