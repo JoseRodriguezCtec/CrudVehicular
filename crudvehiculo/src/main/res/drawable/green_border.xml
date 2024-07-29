@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:shape="rectangle"
+    tools:ignore="ExtraText">
+
+    /*En que consiste el uso de "stroke" para el borde de la figura
+    en que consiste el uso de "corners" para redondear las esquinas de la figura
+    //br
+    tools:ignore="ExtraText"* es para ignorar el error de que no se esta utilizando el archivo
+    en texto */
+
+    <stroke
+        android:width="2dp"
+        android:color="@color/green" />
+    <corners
+        android:radius="40dp"/>
+
+</shape>
