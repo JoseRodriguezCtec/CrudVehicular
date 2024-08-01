@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintBottom_margin="10dp"/>
+        android:layout_marginBottom="10dp"/>
 
     <!-- Botón Update -->
     <com.google.android.material.button.MaterialButton
@@ -36,6 +36,6 @@
         app:layout_constraintBottom_toTopOf="@id/btnRegistrarVehiculo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_margin="10dp"/>
+        android:layout_marginBottom="10dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
