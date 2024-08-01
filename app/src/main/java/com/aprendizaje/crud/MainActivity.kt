@@ -32,25 +32,25 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun readData(busquedaVehiculo: String) {
-        databaseReference.child(busquedaVehiculo).get().addOnSuccessListener { dataSnapshot ->
-            if (dataSnapshot.exists()) {
-                val ownerVehiculo = dataSnapshot.child("OwnerVehiculo").value
-                val vehiculoBrand = dataSnapshot.child("vehiculoBrand").value
-                val vehiculoRTO = dataSnapshot.child("vehiculoRTO").value
-                val vehiculoPrecio = dataSnapshot.child("vehiculoPrecio").value
-
-                Toast.makeText(this@MainActivity, "Resultado encontrado", Toast.LENGTH_SHORT).show()
-
+        databaseReference= FirebaseDatabase.getInstance().getReference("vehiculos")
+        databaseReference.child(busquedaVehiculo).get().addOnSuccessListener {
+            if(it.exists()){
+                val ownerVehiculo = it.child("ownerVehiculo").value
+                val vehiculoBrand =it.child("vehiculoBrand").value
+                val vehiculoRTO = it.child("vehiculoRTO").value
+                val vehiculoPrecio = it.child("vehiculoPrecio").value
+                Toast.makeText(this, "Resultado encontrado", Toast.LENGTH_SHORT).show()
                 binding.busquedaVehiculo.text.clear()
-                binding.readOwnerName.text = ownerVehiculo.toString()
-                binding.readvehiculobrand.text = vehiculoBrand.toString()
-                binding.readvehiculoRTO.text = vehiculoRTO.toString()
-                binding.readvehiculoPrecio.text = vehiculoPrecio.toString()
-            } else {
-                Toast.makeText(this@MainActivity, "No se encontraron resultados", Toast.LENGTH_SHORT).show()
+                binding.readOwnerName.setText(ownerVehiculo.toString())
+                binding.readvehiculobrand.setText(vehiculoBrand.toString())
+                binding.readvehiculoRTO.setText(vehiculoRTO.toString())
+                binding.readvehiculoPrecio.setText(vehiculoPrecio.toString())
+            }else{
+                Toast.makeText(this, "No se encontraron resultados", Toast.LENGTH_SHORT).show()
             }
-        }.addOnFailureListener { e ->
-            Toast.makeText(this@MainActivity, "Error al obtener datos: ${e.message}", Toast.LENGTH_SHORT).show()
+        }.addOnSuccessListener {
+            Toast.makeText(this, "Error al buscar", Toast.LENGTH_SHORT).show()
         }
+
     }
 }
