@@ -25,7 +25,12 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity, Upload::class.java)
             startActivity(intent)
             finish()
+        }
 
+        binding.btnUpdate.setOnClickListener {
+            val intent = Intent(this@MainActivity, Update::class.java)
+            startActivity(intent)
+            finish()
         }
 
     }
