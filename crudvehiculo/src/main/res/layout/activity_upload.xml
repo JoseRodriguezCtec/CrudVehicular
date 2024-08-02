@@ -21,6 +21,19 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:id="@+id/uploadVehiculoNumber"
+        android:background="@drawable/green_border"
+        android:layout_marginTop="20dp"
+        android:hint="Enter Vehiculo Number"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:gravity="start|center_vertical"
+        android:padding="16dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
         android:id="@+id/uploadownerName"
         android:background="@drawable/green_border"
         android:layout_marginTop="20dp"
@@ -57,18 +70,7 @@
         android:padding="16dp"
         />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:id="@+id/uploadVehiculoNumber"
-        android:background="@drawable/green_border"
-        android:layout_marginTop="20dp"
-        android:hint="Enter Vehiculo Number"
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="10dp"
-        android:gravity="start|center_vertical"
-        android:padding="16dp"
-        />
+
 
     <EditText
         android:layout_width="match_parent"

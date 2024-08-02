@@ -21,22 +21,22 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:id="@+id/referenceOwnerName"
+            android:id="@+id/referenceVehicleNumber"
             android:background="@drawable/green_border"
-            android:hint="reference Owner Name"
+            android:hint="Reference Vehicle Number"
             android:padding="16dp"
             android:textColor="@color/green"
             android:gravity="start|center_vertical"
             android:layout_marginTop="20dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp" />
-        
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:id="@+id/referenceVehicleNumber"
+            android:id="@+id/referenceOwnerName"
             android:background="@drawable/green_border"
-            android:hint="Reference Vehicle Number"
+            android:hint="reference Owner Name"
             android:padding="16dp"
             android:textColor="@color/green"
             android:gravity="start|center_vertical"

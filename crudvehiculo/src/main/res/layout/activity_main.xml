@@ -11,7 +11,7 @@
     <Button
         android:id="@+id/btnRegistrarVehiculo"
         android:layout_width="0dp"
-        android:layout_height="80dp"
+        android:layout_height="70dp"
         android:text="Registrar Vehiculo"
         android:textSize="18sp"
         android:backgroundTint="@color/green"
@@ -25,7 +25,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnUpdate"
         android:layout_width="0dp"
-        android:layout_height="80dp"
+        android:layout_height="70dp"
         android:backgroundTint="@color/white"
         android:padding="20dp"
         android:text="Update"
@@ -37,5 +37,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="10dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDelete"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:backgroundTint="@color/white"
+        android:padding="20dp"
+        android:text="Delete"
+        android:textColor="@color/green"
+        android:textSize="18sp"
+        app:strokeColor="@color/green"
+        app:strokeWidth="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

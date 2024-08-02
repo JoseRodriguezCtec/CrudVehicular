@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/busquedaVehiculo"
+        android:id="@+id/vehicleNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
@@ -25,7 +25,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/btnBuscar"
+        android:id="@+id/buttonsearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Buscar"
@@ -34,9 +34,9 @@
         android:padding="12dp"
         android:textStyle="bold"
         android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@id/busquedaVehiculo"
-        app:layout_constraintStart_toStartOf="@id/busquedaVehiculo"
-        app:layout_constraintEnd_toEndOf="@id/busquedaVehiculo" />
+        app:layout_constraintTop_toBottomOf="@id/vehicleNumber"
+        app:layout_constraintStart_toStartOf="@id/vehicleNumber"
+        app:layout_constraintEnd_toEndOf="@id/vehicleNumber" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -47,7 +47,7 @@
         android:background="@drawable/green_border"
         android:orientation="vertical"
         android:padding="10dp"
-        app:layout_constraintTop_toBottomOf="@id/btnBuscar"
+        app:layout_constraintTop_toBottomOf="@id/buttonsearch"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
