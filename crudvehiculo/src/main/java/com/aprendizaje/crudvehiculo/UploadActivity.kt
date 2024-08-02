@@ -3,16 +3,12 @@ package com.aprendizaje.crudvehiculo
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.aprendizaje.crudvehiculo.databinding.ActivityUploadBinding
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import java.lang.ref.Reference
 
-class Upload : AppCompatActivity() {
+class UploadActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityUploadBinding
     //Se hace mención de la base de datos de Firebase y se le asigna un valor nulo
@@ -44,7 +40,7 @@ class Upload : AppCompatActivity() {
                 binding.uploadPrecio.text.clear()
 
                 Toast.makeText(this, "Vehiculo registrado", Toast.LENGTH_SHORT).show()
-                val intent = Intent (this@Upload, MainActivity::class.java)
+                val intent = Intent (this@UploadActivity, MainActivity::class.java)
                 startActivity(intent)
                 finish()
             }.addOnFailureListener{

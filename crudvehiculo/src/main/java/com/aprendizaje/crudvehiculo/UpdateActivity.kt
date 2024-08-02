@@ -7,7 +7,7 @@ import com.aprendizaje.crudvehiculo.databinding.ActivityUpdateBinding
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
-class Update : AppCompatActivity() {
+class UpdateActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityUpdateBinding
     private lateinit var databaseReference: DatabaseReference

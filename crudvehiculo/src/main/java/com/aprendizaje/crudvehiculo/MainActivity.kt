@@ -22,19 +22,19 @@ class MainActivity : AppCompatActivity() {
         binding.btnRegistrarVehiculo.setOnClickListener {
             //Se crea un intent para pasar de una actividad a otra y
             //se le pasa el contexto de la actividad actual y la actividad a la que se quiere ir
-            val intent = Intent(this@MainActivity, Upload::class.java)
+            val intent = Intent(this@MainActivity, UploadActivity::class.java)
             startActivity(intent)
             finish()
         }
 
         binding.btnUpdate.setOnClickListener {
-            val intent = Intent(this@MainActivity, Update::class.java)
+            val intent = Intent(this@MainActivity, UpdateActivity::class.java)
             startActivity(intent)
             finish()
         }
 
         binding.btnDelete.setOnClickListener {
-            val intent = Intent(this@MainActivity, Delete::class.java)
+            val intent = Intent(this@MainActivity, DeleteActivity::class.java)
             startActivity(intent)
             finish()
         }

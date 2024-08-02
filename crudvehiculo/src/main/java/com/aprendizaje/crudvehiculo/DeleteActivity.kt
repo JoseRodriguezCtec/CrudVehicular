@@ -2,15 +2,12 @@ package com.aprendizaje.crudvehiculo
 
 import android.os.Bundle
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.aprendizaje.crudvehiculo.databinding.ActivityDeleteBinding
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
-class Delete : AppCompatActivity() {
+class DeleteActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDeleteBinding
     private lateinit var databaseReference: DatabaseReference

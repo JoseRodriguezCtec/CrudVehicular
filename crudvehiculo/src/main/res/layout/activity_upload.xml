@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:layout_gravity="center_vertical"
     android:background="@drawable/hola_dos"
-    tools:context=".Upload">
+    tools:context=".UploadActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
