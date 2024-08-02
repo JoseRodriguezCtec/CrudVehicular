@@ -34,7 +34,7 @@ class Update : AppCompatActivity() {
 
     //Se crea una funcion para actualizar los datos de un vehiculo
     private fun updateData(VehiculoNumber:String, ownerName:String, vehicleBrand:String, vehicleRTO:String,precio:Double){
-        databaseReference = FirebaseDatabase.getInstance().getReference("Vehiculos")
+        databaseReference = FirebaseDatabase.getInstance().getReference("Vehiculos Actualizado")
         val vehiculoData = mapOf<String, String>(
             "OwnerName" to ownerName,
             "VehiculoBrand" to vehicleBrand,

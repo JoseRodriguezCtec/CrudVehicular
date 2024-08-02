@@ -20,31 +20,31 @@ class MainActivity : AppCompatActivity() {
         // Inicialización de Firebase Database
         databaseReference = FirebaseDatabase.getInstance().getReference("vehiculos")
 
-        binding.btnBuscar.setOnClickListener {
-            val busquedaVehiculo = binding.busquedaVehiculo.text.toString().trim()
+        binding.buttonsearch.setOnClickListener {
+            val vehicleNumber = binding.vehicleNumber.text.toString().trim()
 
-            if (busquedaVehiculo.isEmpty()) {
+            if (vehicleNumber.isEmpty()) {
                 Toast.makeText(this, "Ingrese un vehiculo", Toast.LENGTH_SHORT).show()
             } else {
-                readData(busquedaVehiculo)
+                readData(vehicleNumber)
             }
         }
     }
 
-    private fun readData(busquedaVehiculo: String) {
+    private fun readData(vehicleNumber: String) {
         databaseReference= FirebaseDatabase.getInstance().getReference("vehiculos")
-        databaseReference.child(busquedaVehiculo).get().addOnSuccessListener {
+        databaseReference.child(vehicleNumber).get().addOnSuccessListener {
             if(it.exists()){
-                val ownerVehiculo = it.child("ownerVehiculo").value
-                val vehiculoBrand =it.child("vehiculoBrand").value
-                val vehiculoRTO = it.child("vehiculoRTO").value
-                val vehiculoPrecio = it.child("vehiculoPrecio").value
+                val uploadownerName = it.child("ownerVehiculo").value
+                val uploadvehiculoBrand =it.child("vehiculoBrand").value
+                val uploadvehiculoRTO = it.child("vehiculoRTO").value
+                val uploadPrecio = it.child("vehiculoPrecio").value
                 Toast.makeText(this, "Resultado encontrado", Toast.LENGTH_SHORT).show()
-                binding.busquedaVehiculo.text.clear()
-                binding.readOwnerName.setText(ownerVehiculo.toString())
-                binding.readvehiculobrand.setText(vehiculoBrand.toString())
-                binding.readvehiculoRTO.setText(vehiculoRTO.toString())
-                binding.readvehiculoPrecio.setText(vehiculoPrecio.toString())
+                binding.vehicleNumber.text.clear()
+                binding.readOwnerName.setText(uploadownerName.toString())
+                binding.readvehiculobrand.setText(uploadvehiculoBrand.toString())
+                binding.readvehiculoRTO.setText(uploadvehiculoRTO.toString())
+                binding.readvehiculoPrecio.setText(uploadPrecio.toString())
             }else{
                 Toast.makeText(this, "No se encontraron resultados", Toast.LENGTH_SHORT).show()
             }
